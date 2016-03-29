@@ -17,13 +17,13 @@
     background-size: cover;
     background-attachment: scroll;
     box-sizing: border-box;
-    background-image: url(https://django-personal-web-static-host.s3.amazonaws.com/img/Godafoss.png); /* fallback */
-    background-image: -webkit-gradient(linear, left top, left bottom, from(rgba(94,94,94,.4)), to(rgba(94,94,94,.4))), url(https://django-personal-web-static-host.s3.amazonaws.com/img/GoldenGateBridge.png); /* Saf4+, Chrome */
-    background-image: -webkit-linear-gradient(top, rgba(94,94,94,.4), rgba(94,94,94,.4)), url(https://django-personal-web-static-host.s3.amazonaws.com/img/GoldenGateBridge.png); /* Chrome 10+, Saf5.1+ */
-    background-image: -moz-linear-gradient(top, rgba(94,94,94,.4), rgba(94,94,94,.4)), url(https://django-personal-web-static-host.s3.amazonaws.com/img/GoldenGateBridge.png); /* FF3.6+ */
-    background-image: -ms-linear-gradient(top, rgba(94,94,94,.4), rgba(94,94,94,.4)), url(https://django-personal-web-static-host.s3.amazonaws.com/img/GoldenGateBridge.png); /* IE10 */
-    background-image: -o-linear-gradient(top, rgba(94,94,94,.4), rgba(94,94,94,.4)), url(https://django-personal-web-static-host.s3.amazonaws.com/img/GoldenGateBridge.png); /* Opera 11.10+ */
-    background-image: linear-gradient(top bottom, rgba(94,94,94,.4), rgba(94,94,94,.4)), url(https://django-personal-web-static-host.s3.amazonaws.com/img/GoldenGateBridge.png); /* W3C */
+    background-image: url(../img/GoldenGateBridge.png); /* fallback */
+    background-image: -webkit-gradient(linear, left top, left bottom, from(rgba(94,94,94,.4)), to(rgba(94,94,94,.4))), url(../img/GoldenGateBridge.png); /* Saf4+, Chrome */
+    background-image: -webkit-linear-gradient(top, rgba(94,94,94,.4), rgba(94,94,94,.4)), url(../img/GoldenGateBridge.png); /* Chrome 10+, Saf5.1+ */
+    background-image: -moz-linear-gradient(top, rgba(94,94,94,.4), rgba(94,94,94,.4)), url(../img/GoldenGateBridge.png); /* FF3.6+ */
+    background-image: -ms-linear-gradient(top, rgba(94,94,94,.4), rgba(94,94,94,.4)), url(../img/GoldenGateBridge.png); /* IE10 */
+    background-image: -o-linear-gradient(top, rgba(94,94,94,.4), rgba(94,94,94,.4)), url(../img/GoldenGateBridge.png); /* Opera 11.10+ */
+    background-image: linear-gradient(top bottom, rgba(94,94,94,.4), rgba(94,94,94,.4)), url(../img/GoldenGateBridge.png); /* W3C */
 }
 
 .sub-header {
