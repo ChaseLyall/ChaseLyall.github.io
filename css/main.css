@@ -1,0 +1,495 @@
+.container {
+  max-width: 1200px !important;
+}
+
+.home-header {
+    color: #ffffff;
+    position: relative;
+    text-align: center;
+    display: inline-block;
+    vertical-align: middle;
+    margin-top: 0px;
+    min-height: 500px;
+    width: 100%;
+    background-color: #5e5e5e;
+    background-repeat: no-repeat;
+    background-position: center left;
+    background-size: cover;
+    background-attachment: scroll;
+    box-sizing: border-box;
+    background-image: url(https://django-personal-web-static-host.s3.amazonaws.com/img/Godafoss.png); /* fallback */
+    background-image: -webkit-gradient(linear, left top, left bottom, from(rgba(94,94,94,.4)), to(rgba(94,94,94,.4))), url(https://django-personal-web-static-host.s3.amazonaws.com/img/GoldenGateBridge.png); /* Saf4+, Chrome */
+    background-image: -webkit-linear-gradient(top, rgba(94,94,94,.4), rgba(94,94,94,.4)), url(https://django-personal-web-static-host.s3.amazonaws.com/img/GoldenGateBridge.png); /* Chrome 10+, Saf5.1+ */
+    background-image: -moz-linear-gradient(top, rgba(94,94,94,.4), rgba(94,94,94,.4)), url(https://django-personal-web-static-host.s3.amazonaws.com/img/GoldenGateBridge.png); /* FF3.6+ */
+    background-image: -ms-linear-gradient(top, rgba(94,94,94,.4), rgba(94,94,94,.4)), url(https://django-personal-web-static-host.s3.amazonaws.com/img/GoldenGateBridge.png); /* IE10 */
+    background-image: -o-linear-gradient(top, rgba(94,94,94,.4), rgba(94,94,94,.4)), url(https://django-personal-web-static-host.s3.amazonaws.com/img/GoldenGateBridge.png); /* Opera 11.10+ */
+    background-image: linear-gradient(top bottom, rgba(94,94,94,.4), rgba(94,94,94,.4)), url(https://django-personal-web-static-host.s3.amazonaws.com/img/GoldenGateBridge.png); /* W3C */
+}
+
+.sub-header {
+    border-bottom: 1px solid #eee;
+    margin-bottom: 20px;
+    margin-top: 20px;
+    padding-bottom: 9px;
+}
+
+@media print {
+    .noprint {
+        display: none;
+    }
+}
+
+.home-footer {
+    padding-top: 40px;
+    padding-bottom: 40px;
+    color: #767676;
+    text-align: center;
+    width: 100%;
+}
+
+/*!
+ * Bootstrap Docs (http://getbootstrap.com)
+ * Copyright 2011-2014 Twitter, Inc.
+ * Licensed under the Creative Commons Attribution 3.0 Unported License. For
+ * details, see http://creativecommons.org/licenses/by/3.0/.
+ */
+.bs-docs-nav {
+    margin-bottom: 0;
+    background-color: #fff;
+    border-bottom: 0
+}
+
+.bs-home-nav .bs-nav-b {
+    display: none
+}
+
+.bs-docs-nav .navbar-brand, .bs-docs-nav .navbar-nav > li > a {
+    font-weight: 500;
+    color: #2371D0
+}
+
+.bs-docs-nav .navbar-nav > li > a:hover, .bs-docs-nav .navbar-nav > .active > a, .bs-docs-nav .navbar-nav > .active > a:hover {
+    color: #463265;
+    background-color: #f9f9f9
+}
+
+.bs-docs-nav .navbar-toggle .icon-bar {
+    background-color: #2371D0
+}
+
+.bs-docs-nav .navbar-header .navbar-toggle {
+    border-color: #fff
+}
+
+.bs-docs-nav .navbar-header .navbar-toggle:hover, .bs-docs-nav .navbar-header .navbar-toggle:focus {
+    background-color: #f9f9f9;
+    border-color: #f9f9f9
+}
+
+.bs-docs-sidenav {
+    margin-top: 20px;
+    margin-bottom: 20px
+}
+
+.bs-docs-sidebar .nav > li > a {
+    display: block;
+    padding: 4px 20px;
+    font-size: 13px;
+    font-weight: 500;
+    color: #999
+}
+
+.bs-docs-sidebar .nav > li > a:hover, .bs-docs-sidebar .nav > li > a:focus {
+    padding-left: 19px;
+    color: #2371D0;
+    text-decoration: none;
+    background-color: transparent;
+    border-left: 1px solid #2371D0
+}
+
+.bs-docs-sidebar .nav > .active > a, .bs-docs-sidebar .nav > .active:hover > a, .bs-docs-sidebar .nav > .active:focus > a {
+    padding-left: 18px;
+    font-weight: 700;
+    color: #2371D0;
+    background-color: transparent;
+    border-left: 2px solid #2371D0
+}
+
+.bs-docs-sidebar .nav .nav {
+    display: none;
+    padding-bottom: 10px
+}
+
+.bs-docs-sidebar .nav .nav > li > a {
+    padding-top: 1px;
+    padding-bottom: 1px;
+    padding-left: 30px;
+    font-size: 12px;
+    font-weight: 400
+}
+
+.bs-docs-sidebar .nav .nav > li > a:hover, .bs-docs-sidebar .nav .nav > li > a:focus {
+    padding-left: 29px
+}
+
+.bs-docs-sidebar .nav .nav > .active > a, .bs-docs-sidebar .nav .nav > .active:hover > a, .bs-docs-sidebar .nav .nav > .active:focus > a {
+    padding-left: 28px;
+    font-weight: 500
+}
+
+.bs-example .navbar:last-child {
+    margin-bottom: 0
+}
+
+.bs-navbar-top-example, .bs-navbar-bottom-example {
+    z-index: 1;
+    padding: 0;
+    overflow: hidden
+}
+
+.bs-navbar-top-example .navbar-header, .bs-navbar-bottom-example .navbar-header {
+    margin-left: 0
+}
+
+.bs-navbar-top-example .navbar-fixed-top, .bs-navbar-bottom-example .navbar-fixed-bottom {
+    position: relative;
+    margin-right: 0;
+    margin-left: 0
+}
+
+.bs-navbar-top-example {
+    padding-bottom: 45px
+}
+
+.bs-navbar-top-example:after {
+    top: auto;
+    bottom: 15px
+}
+
+.bs-navbar-top-example .navbar-fixed-top {
+    top: -1px
+}
+
+.bs-navbar-bottom-example {
+    padding-top: 45px
+}
+
+.bs-navbar-bottom-example .navbar-fixed-bottom {
+    bottom: -1px
+}
+
+.bs-navbar-bottom-example .navbar {
+    margin-bottom: 0
+}
+
+.bs-docs-footer {
+    padding-top: 40px;
+    padding-bottom: 40px;
+    margin-top: 100px;
+    color: #767676;
+    text-align: center;
+    /*border-top: 1px solid #e5e5e5*/
+}
+
+.bs-docs-footer-links {
+    padding-left: 0;
+    margin-top: 20px
+}
+
+.bs-docs-footer-links li {
+    display: inline;
+    padding: 0 2px
+}
+
+.bs-docs-footer-links li:first-child {
+    padding-left: 0
+}
+
+@media (min-width: 768px) {
+    .bs-navbar-top-example .navbar-fixed-top, .bs-navbar-bottom-example .navbar-fixed-bottom {
+        position: absolute
+    }
+}
+
+/*! HTML5 Boilerplate v5.0.0 | MIT License | http://h5bp.com/ */
+
+/*
+ * What follows is the result of much research on cross-browser styling.
+ * Credit left inline and big thanks to Nicolas Gallagher, Jonathan Neal,
+ * Kroc Camen, and the H5BP dev community and team.
+ */
+
+/* ==========================================================================
+   Base styles: opinionated defaults
+   ========================================================================== */
+
+html {
+    color: #222;
+    font-size: 1em;
+    line-height: 1.4;
+}
+
+/*
+ * Remove text-shadow in selection highlight:
+ * https://twitter.com/miketaylr/status/12228805301
+ *
+ * These selection rule sets have to be separate.
+ * Customize the background color to match your design.
+ */
+
+::-moz-selection {
+    background: #b3d4fc;
+    text-shadow: none;
+}
+
+::selection {
+    background: #b3d4fc;
+    text-shadow: none;
+}
+
+/*
+ * A better looking default horizontal rule
+ */
+
+hr {
+    display: block;
+    height: 1px;
+    border: 0;
+    border-top: 1px solid #ccc;
+    margin: 1em 0;
+    padding: 0;
+}
+
+/*
+ * Remove the gap between audio, canvas, iframes,
+ * images, videos and the bottom of their containers:
+ * https://github.com/h5bp/html5-boilerplate/issues/440
+ */
+
+audio,
+canvas,
+iframe,
+img,
+svg,
+video {
+    vertical-align: middle;
+}
+
+/*
+ * Remove default fieldset styles.
+ */
+
+fieldset {
+    border: 0;
+    margin: 0;
+    padding: 0;
+}
+
+/*
+ * Allow only vertical resizing of textareas.
+ */
+
+textarea {
+    resize: vertical;
+}
+
+/* ==========================================================================
+   Browser Upgrade Prompt
+   ========================================================================== */
+
+.browserupgrade {
+    margin: 0.2em 0;
+    background: #ccc;
+    color: #000;
+    padding: 0.2em 0;
+}
+
+/* ==========================================================================
+   Author's custom styles
+   ========================================================================== */
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+/* ==========================================================================
+   Helper classes
+   ========================================================================== */
+
+/*
+ * Hide visually and from screen readers:
+ * http://juicystudio.com/article/screen-readers-display-none.php
+ */
+
+.hidden {
+    display: none !important;
+    visibility: hidden;
+}
+
+/*
+ * Hide only visually, but have it available for screen readers:
+ * http://snook.ca/archives/html_and_css/hiding-content-for-accessibility
+ */
+
+.visuallyhidden {
+    border: 0;
+    clip: rect(0 0 0 0);
+    height: 1px;
+    margin: -1px;
+    overflow: hidden;
+    padding: 0;
+    position: absolute;
+    width: 1px;
+}
+
+/*
+ * Extends the .visuallyhidden class to allow the element
+ * to be focusable when navigated to via the keyboard:
+ * https://www.drupal.org/node/897638
+ */
+
+.visuallyhidden.focusable:active,
+.visuallyhidden.focusable:focus {
+    clip: auto;
+    height: auto;
+    margin: 0;
+    overflow: visible;
+    position: static;
+    width: auto;
+}
+
+/*
+ * Hide visually and from screen readers, but maintain layout
+ */
+
+.invisible {
+    visibility: hidden;
+}
+
+/*
+ * Clearfix: contain floats
+ *
+ * For modern browsers
+ * 1. The space content is one way to avoid an Opera bug when the
+ *    `contenteditable` attribute is included anywhere else in the document.
+ *    Otherwise it causes space to appear at the top and bottom of elements
+ *    that receive the `clearfix` class.
+ * 2. The use of `table` rather than `block` is only necessary if using
+ *    `:before` to contain the top-margins of child elements.
+ */
+
+.clearfix:before,
+.clearfix:after {
+    content: " "; /* 1 */
+    display: table; /* 2 */
+}
+
+.clearfix:after {
+    clear: both;
+}
+
+/* ==========================================================================
+   EXAMPLE Media Queries for Responsive Design.
+   These examples override the primary ('mobile first') styles.
+   Modify as content requires.
+   ========================================================================== */
+
+@media only screen and (min-width: 35em) {
+    /* Style adjustments for viewports that meet the condition */
+}
+
+@media print,
+       (-o-min-device-pixel-ratio: 5/4),
+       (-webkit-min-device-pixel-ratio: 1.25),
+       (min-resolution: 120dpi) {
+    /* Style adjustments for high resolution devices */
+}
+
+/* ==========================================================================
+   Print styles.
+   Inlined to avoid the additional HTTP request:
+   http://www.phpied.com/delay-loading-your-print-css/
+   ========================================================================== */
+
+@media print {
+    *,
+    *:before,
+    *:after {
+        background: transparent !important;
+        color: #000 !important; /* Black prints faster:
+                                   http://www.sanbeiji.com/archives/953 */
+        box-shadow: none !important;
+        text-shadow: none !important;
+    }
+
+    a,
+    a:visited {
+        text-decoration: underline;
+    }
+
+    a[href]:after {
+        content: " (" attr(href) ")";
+    }
+
+    abbr[title]:after {
+        content: " (" attr(title) ")";
+    }
+
+    /*
+     * Don't show links that are fragment identifiers,
+     * or use the `javascript:` pseudo protocol
+     */
+
+    a[href^="#"]:after,
+    a[href^="javascript:"]:after {
+        content: "";
+    }
+
+    pre,
+    blockquote {
+        border: 1px solid #999;
+        page-break-inside: avoid;
+    }
+
+    /*
+     * Printing Tables:
+     * http://css-discuss.incutio.com/wiki/Printing_Tables
+     */
+
+    thead {
+        display: table-header-group;
+    }
+
+    tr,
+    img {
+        page-break-inside: avoid;
+    }
+
+    img {
+        max-width: 100% !important;
+    }
+
+    p,
+    h2,
+    h3 {
+        orphans: 3;
+        widows: 3;
+    }
+
+    h2,
+    h3 {
+        page-break-after: avoid;
+    }
+}

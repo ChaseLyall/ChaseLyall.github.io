@@ -1,0 +1,174 @@
+{% extends "base.html" %}
+{% load staticfiles %}
+
+{% block title %}Resume{% endblock %}
+{% block pagetitle %}Resume{% endblock %}
+
+{% block body-style %}style="margin-top: 60px"{% endblock %}
+{% block navbar-class %}navbar-fixed-top noprint{% endblock %}
+{% block nav-about %}<li class="active"><a class="active" href="{% url 'resume' %}">About</a></li>{% endblock nav-about %}
+
+{% block content %}
+    <!-- Sidebar -->
+    <div class="container">
+    <div class="col-md-3 col-lg-3 hidden-xs hidden-sm" role="complementary" style="margin-top: 20px;">
+        <div class="bs-docs-sidebar center-block">
+            <img class="img-circle center-block" src="{% static 'img/201405_small.jpg' %}" alt="Chase Lyall" style="width: 140px; height: 140px;" align="middle">
+            <h1 class="text-center">Chase Lyall</h1>
+            <ul class="nav text-center">
+                <li>Accenture Federal Services</li>
+                <li>San Francisco Bay Area</li>
+            </ul>
+            <nav>
+                <ul class="nav bs-docs-sidenav">
+                <li><a href="#education">Education</a></li>
+                <li><a href="#work-experience">Work Experience</a></li>
+                <li><a href="#skills">Skills</a></li>
+                <li><a href="#leadership">Leadership</a></li>
+                <li><a href="#activities">Activities</a></li>
+                <li><a href="#awards-distinctions">Awards & Distinctions</a></li>
+            </ul></nav>
+        </div>
+    </div>
+        <div class="col-sm-12 hidden-md hidden-lg" role="complementary">
+        <div class="center-block affix-top">
+            <img class="img-circle center-block" src="{% static 'img/201405_small.jpg' %}" alt="Chase Lyall" style="width: 140px; height: 140px;" align="middle">
+            <h1 class="text-center">Chase Lyall</h1>
+            <ul class="nav text-center">
+                <li>Accenture Federal Services</li>
+                <li>San Francisco Bay Area</li>
+            </ul>
+        </div>
+    </div>
+    <div class="col-sm-12 col-xs-12 col-md-9 col-lg-9">
+    {% if education_list %}
+        <div>
+            <h2 id="education" class="sub-header">Education</h2>
+                <table width="100%">
+                {% for education in education_list %}
+                    <tr style="vertical-align: text-top">
+                    <td>{{ education.degree }}</td>
+                    <td><strong>{{ education.school }}</strong></td>
+                    <td align="right">{{ education.graduation_month|date:"M, Y" }}</td>
+                    </tr>
+                    <tr>
+                    <td>&nbsp;</td>
+                    <td>{{ education.major }}</td>
+                    <td>&nbsp;</td>
+                    </tr>
+                    <tr>
+                        <td>&nbsp;</td>
+                        <td>GPA: {{ education.gpa }}</td>
+                        <td>&nbsp;</td>
+                    </tr>
+                    {% if not forloop.last %}<tr>
+                    <td>&nbsp;</td>
+                    <td>&nbsp;</td>
+                    <td>&nbsp;</td>
+                    </tr>{% endif %}
+                {% endfor %}
+            </table>
+        </div>
+    {% endif %}
+    {% if job_list %}
+        <div>
+            <h2 id="work-experience" class="sub-header">Work Experience</h2>
+            {% for job in job_list %}
+                <p><strong>{{ job.employer_title }}</strong>
+                <span style="float:right">{{ job.start_month|date:"M, Y" }} -
+                {% if job.end_month == job.start_month %}
+                    Present
+                {% else %}
+                    {{ job.end_month|date:"M, Y"  }}
+                {% endif %}</span><br>
+                {{ job.job_title }}<br>
+                <i>{{ job.location }}</i><br>
+                <ul>
+                {% for job_desc in job.jobdesc_set.all %}
+                    <li>{{ job_desc.description }}</li>
+                {% endfor %}
+                </ul>
+            {% endfor %}
+        </div>
+    {% endif %}
+    {% if skill_list %}
+        <div>
+        <h2 id="skills" class="sub-header">Skills</h2>
+        {% for skill_category in skill_list %}
+            <table width="100%">
+            <tr><td colspan="3"><strong>{{ skill_category.category_name }}</strong></td></tr>
+            {% for skill in skill_category.skill_set.all %}
+                <tr style="vertical-align: text-top">
+                    <td width="40px">&nbsp;</td>
+                    <td width="80px"><em>{{ skill.proficiency }}</em></td>
+                    <td>{{ skill.name }}</td>
+                </tr>
+                {% if forloop.last %}
+                    <tr>
+                    <td colspan="3">&nbsp;</td>
+                    </tr>{% endif %}
+            {% endfor %}
+            </table>
+        {% endfor %}
+        </div>
+    {% endif %}
+        {% if leadership_list %}
+        <div>
+            <h2 id="leadership" class="sub-header">Leadership</h2>
+            {% for leadership in leadership_list %}
+                <p><strong>{{ leadership.name }}</strong> | {{ leadership.location }}
+                <span style="float:right">{{ leadership.start_month|date:"M, Y" }} -
+                {% if leadership.end_month == leadership.start_month %}
+                    Present
+                {% else %}
+                    {{ leadership.end_month|date:"M, Y"  }}
+                {% endif %}</span><br>
+                {{ leadership.position }}<br>
+                <ul>
+                {% for leadership_desc in leadership.leadershipdesc_set.all %}
+                    <li>{{ leadership_desc.description }}</li>
+                {% endfor %}
+                </ul>
+            {% endfor %}
+        </div>
+    {% endif %}
+        {% if activity_list %}
+        <div>
+            <h2 id="activities" class="sub-header">Activities</h2>
+            {% for activity in activity_list %}
+                <p><strong>{{ activity.name }}</strong>{% if activity.location %} | {{ activity.location }}{% endif %}
+                <span style="float:right">{{ activity.start_month|date:"M, Y" }} -
+                {% if activity.end_month == activity.start_month %}
+                    Present
+                {% else %}
+                    {{ activity.end_month|date:"M, Y"  }}
+                {% endif %}</span><br>
+                &emsp;&emsp;&emsp;{{ activity.description }}<br>
+            {% endfor %}
+        </div>
+    {% endif %}
+        {% if award_list %}
+        <div>
+            <h2 id="awards-distinctions" class="sub-header">Awards & Distinctions</h2>
+            {% for award in award_list %}
+                <p><strong>{{ award.name }}</strong>{% if award.location %} | {{ award.location }}{% endif %}
+                <span style="float:right">
+                {% if award.date %}
+                    {{ award.date|date:"M, Y" }}
+                {% endif %}</span><br>
+                &emsp;&emsp;&emsp;{{ award.description }}<br>
+            {% endfor %}
+        </div>
+    {% endif %}
+    </div>
+    </div>
+{% endblock content %}
+
+{% block extrascript %}
+    <script src="{% static "js/resume.js" %}"></script>
+    <script>
+        var shiftWindow = function() { scrollBy(0, -60) };
+        window.addEventListener("hashchange", shiftWindow);
+        function load() { if (window.location.hash) shiftWindow(); }
+    </script>
+{% endblock %}
