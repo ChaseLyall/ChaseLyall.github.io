@@ -1,19 +1,60 @@
-{% extends "base.html" %}
-{% load staticfiles %}
+<!doctype html>
+<html class="no-js" lang="">
 
-{% block title %}Resume{% endblock %}
-{% block pagetitle %}Resume{% endblock %}
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <title>Resume</title>
+    <meta name="description" content="Resume">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
 
-{% block body-style %}style="margin-top: 60px"{% endblock %}
-{% block navbar-class %}navbar-fixed-top noprint{% endblock %}
-{% block nav-about %}<li class="active"><a class="active" href="{% url 'resume' %}">About</a></li>{% endblock nav-about %}
+    <link rel="apple-touch-icon" href="img/apple-touch-icon.png">
 
-{% block content %}
+    <link rel="stylesheet" type="text/css" href="css/normalize.css"/>
+    <link rel="stylesheet" type="text/css" href="css/bootstrap.min.css"/>
+    <link rel="stylesheet" type="text/css" href="css/bootstrap-theme.min.css"/>
+    <link rel="stylesheet" type="text/css" href="css/main.css"/>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.3.0/css/font-awesome.min.css">
+    <script src="js/modernizr-2.8.3.min.js"></script>
+</head>
+
+<body style="margin-top: 60px">
+    <!--[if lt IE 8]>
+        <p class="browserupgrade">You are using an <strong>outdated</strong> browser. Please <a href="http://browsehappy.com/">upgrade your browser</a> to improve your experience.</p>
+    <![endif]-->
+
+<!-- Add your site or application content here -->
+<a class="sr-only sr-only-focusable" href="#content">Skip to main content</a>
+
+<!-- Navbar -->
+<nav class="navbar navbar-default navbar-fixed-top noprint" id="top" role="banner" style="margin-bottom: 0px">
+    <div class="container-fluid">
+        <!-- Brand and toggle get grouped for better mobile display -->
+        <div class="navbar-header">
+            <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1">
+                <span class="sr-only">Toggle navigation</span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+            </button>
+            <a class="navbar-brand" href="index.html">Chase Lyall</a>
+        </div>
+        <!-- Collect the nav links, forms, and other content for toggling -->
+        <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
+            <ul class="nav navbar-nav">
+                <li class="active"><a class="active" href="resume.html">About</a></li>
+            </ul>
+        </div>
+        <!-- /.navbar-collapse -->
+    </div>
+    <!-- /.container-fluid -->
+</nav>
+
     <!-- Sidebar -->
     <div class="container">
     <div class="col-md-3 col-lg-3 hidden-xs hidden-sm" role="complementary" style="margin-top: 20px;">
         <div class="bs-docs-sidebar center-block">
-            <img class="img-circle center-block" src="{% static 'img/201405_small.jpg' %}" alt="Chase Lyall" style="width: 140px; height: 140px;" align="middle">
+            <img class="img-circle center-block" src="img/201405_small.jpg" alt="Chase Lyall" style="width: 140px; height: 140px;" align="middle">
             <h1 class="text-center">Chase Lyall</h1>
             <ul class="nav text-center">
                 <li>Accenture Federal Services</li>
@@ -41,78 +82,126 @@
         </div>
     </div>
     <div class="col-sm-12 col-xs-12 col-md-9 col-lg-9">
-    {% if education_list %}
         <div>
             <h2 id="education" class="sub-header">Education</h2>
                 <table width="100%">
-                {% for education in education_list %}
                     <tr style="vertical-align: text-top">
-                    <td>{{ education.degree }}</td>
-                    <td><strong>{{ education.school }}</strong></td>
-                    <td align="right">{{ education.graduation_month|date:"M, Y" }}</td>
+                    <td>M.S.</td>
+                    <td><strong>Johns Hopkins University</strong></td>
+                    <td align="right">May 2013</td>
                     </tr>
                     <tr>
                     <td>&nbsp;</td>
-                    <td>{{ education.major }}</td>
+                    <td>Engineering Management</td>
                     <td>&nbsp;</td>
                     </tr>
                     <tr>
                         <td>&nbsp;</td>
-                        <td>GPA: {{ education.gpa }}</td>
+                        <td>GPA: 3.88</td>
                         <td>&nbsp;</td>
                     </tr>
-                    {% if not forloop.last %}<tr>
+                    <tr>
                     <td>&nbsp;</td>
                     <td>&nbsp;</td>
                     <td>&nbsp;</td>
-                    </tr>{% endif %}
-                {% endfor %}
+                    </tr>
+					<tr style="vertical-align: text-top">
+                    <td>B.S.</td>
+                    <td><strong>University of California, Los Angeles</strong></td>
+                    <td align="right">Jun 2012</td>
+                    </tr>
+                    <tr>
+                    <td>&nbsp;</td>
+                    <td>Bioengineering</td>
+                    <td>&nbsp;</td>
+                    </tr>
+                    <tr>
+                        <td>&nbsp;</td>
+                        <td>GPA: 3.38</td>
+                        <td>&nbsp;</td>
+                    </tr>
+                    <tr>
+                    <td>&nbsp;</td>
+                    <td>&nbsp;</td>
+                    <td>&nbsp;</td>
+                    </tr>
             </table>
         </div>
-    {% endif %}
-    {% if job_list %}
         <div>
             <h2 id="work-experience" class="sub-header">Work Experience</h2>
-            {% for job in job_list %}
-                <p><strong>{{ job.employer_title }}</strong>
-                <span style="float:right">{{ job.start_month|date:"M, Y" }} -
-                {% if job.end_month == job.start_month %}
-                    Present
-                {% else %}
-                    {{ job.end_month|date:"M, Y"  }}
-                {% endif %}</span><br>
-                {{ job.job_title }}<br>
-                <i>{{ job.location }}</i><br>
+                <p><strong>Accenture Federal Services</strong>
+                <span style="float:right">Jun 2013 - Present</span><br>
+                Business & Technology Consultant<br>
+                <i>San Francisco, CA</i><br>
                 <ul>
-                {% for job_desc in job.jobdesc_set.all %}
-                    <li>{{ job_desc.description }}</li>
-                {% endfor %}
+                    <li>Lead the performance tuning team of a large (100 TB) federal Oracle database</li>
+					<li>Database processes 1 billion inputs, resulting in 10 billion transactions per day</li>
+					<li>Translate business requirements to technical req. with help of multidisciplinary team</li>
+					<li>Organize and orchestrate performance and operations testing efforts</li>
+					<li>Redesigned reporting system to improve bottleneck visibility</li>
+					<li>Automated several work processes and testing efforts, reducing team size from 5 to 1</li>
                 </ul>
-            {% endfor %}
+				<p><strong>Department of Bioengineering, UCLA</strong>
+                <span style="float:right">Jun 2011 - Jun 2012</span><br>
+                Undergraduate Research Associate | P.I.: Dr. James Dunn<br>
+                <i>Los Angeles, CA</i><br>
+                <ul>
+                    <li>Investigated smooth muscle cell proliferation on a novel collagen and heparan-sulfate coated electrospun polycaprolactone scaffold</li>
+					<li><a href="http://www.worldscientific.com/doi/abs/10.1142/S2339547816400033">Collagen and heparan sulfate coatings differentially alter cell proliferation and attachment in vitro and in vivo</a>. Christopher M. Walthers, Chase J. Lyall, Alireza K. Nazemi, Puneet V. Rana, and James C.Y. Dunn. TECHNOLOGY (doi: 10.1142/S2339547816400033)</li>
+                </ul>
+				<p><strong>Eastdil Secured</strong>
+                <span style="float:right">Jun 2010 - Jun 2011</span><br>
+                Information Technology Intern<br>
+                <i>Santa Monica, CA</i><br>
+                <ul>
+                    <li>Provided direct customer assistance for a cloud-based document sharing portal</li>
+					<li>Wrote property and financing email teasers in HTML</li>
+					<li>Updated company intranet using Visual Basic</li>
+                </ul>
         </div>
-    {% endif %}
-    {% if skill_list %}
         <div>
         <h2 id="skills" class="sub-header">Skills</h2>
-        {% for skill_category in skill_list %}
             <table width="100%">
-            <tr><td colspan="3"><strong>{{ skill_category.category_name }}</strong></td></tr>
-            {% for skill in skill_category.skill_set.all %}
+            <tr><td colspan="3"><strong>Computer Programming</strong></td></tr>
                 <tr style="vertical-align: text-top">
                     <td width="40px">&nbsp;</td>
-                    <td width="80px"><em>{{ skill.proficiency }}</em></td>
-                    <td>{{ skill.name }}</td>
+                    <td width="80px"><em>Advanced</em></td>
+                    <td>SQL, Oracle 11g Performance Tuning</td>
                 </tr>
-                {% if forloop.last %}
+				<tr style="vertical-align: text-top">
+                    <td width="40px">&nbsp;</td>
+                    <td width="80px"><em>Proficient</em></td>
+                    <td>PL/SQL, HTML</td>
+                </tr>
+				<tr style="vertical-align: text-top">
+                    <td width="40px">&nbsp;</td>
+                    <td width="80px"><em>Novice</em></td>
+                    <td>Java, Python, Unix, Amazon Web Services, Django</td>
+                </tr>
                     <tr>
                     <td colspan="3">&nbsp;</td>
-                    </tr>{% endif %}
-            {% endfor %}
+                    </tr>
+			<tr><td colspan="3"><strong>Systems Integration</strong></td></tr>
+				<tr style="vertical-align: text-top">
+                    <td width="40px">&nbsp;</td>
+                    <td width="80px"><em>Proficient</em></td>
+                    <td>Requirements Analysis/Development, Use Cases/User Stories, Agile, Scrum</td>
+                </tr>
+				<tr style="vertical-align: text-top">
+                    <td width="40px">&nbsp;</td>
+                    <td width="80px"><em>Novice</em></td>
+                    <td>Process Analysis and Modeling/Design, Functional Design, Database Design</td>
+                </tr>
+                    <tr>
+                    <td colspan="3">&nbsp;</td>
+                    </tr>
+			<tr><td colspan="3"><strong>Business Implementation</strong></td></tr>
+				<tr style="vertical-align: text-top">
+                    <td width="40px">&nbsp;</td>
+                    <td width="80px"><em>Novice</em></td>
+                    <td>Business Process Design, Change Enablement, Customer Relationship Development, Project Management, Proposal Development</td>
             </table>
-        {% endfor %}
         </div>
-    {% endif %}
-        {% if leadership_list %}
         <div>
             <h2 id="leadership" class="sub-header">Leadership</h2>
             {% for leadership in leadership_list %}
@@ -131,7 +220,6 @@
                 </ul>
             {% endfor %}
         </div>
-    {% endif %}
         {% if activity_list %}
         <div>
             <h2 id="activities" class="sub-header">Activities</h2>
@@ -162,13 +250,42 @@
     {% endif %}
     </div>
     </div>
-{% endblock content %}
 
-{% block extrascript %}
-    <script src="{% static "js/resume.js" %}"></script>
+<footer role="contentinfo" class="home-footer">
+    <div class="container">
+        <div class="col-md-12">
+        <hr>
+        <p>© Chase Lyall, 2016</p>
+        <p>
+            <a href="https://www.facebook.com/chase.lyall"><i class="fa fa-facebook"></i></a> &sdot;
+            <a href="https://twitter.com/ChaseLyall"><i class="fa fa-twitter"></i></a> &sdot;
+            <a href="http://www.linkedin.com/in/chaselyall/en"><i class="fa fa-linkedin"></i></a> &sdot;
+            <a href="http://google.com/+ChaseLyall"><i class="fa fa-google-plus"></i></a>
+        </p>
+        </div>
+    </div>
+</footer>
+
+    <script src="js/jquery-1.11.2.min.js"></script>
+    <script src="js/bootstrap.min.js"></script>
+    <script src="js/plugins.js'"></script>
+    <script src="js/main.js'"></script>
+	<script src="js/resume.js"></script>
     <script>
         var shiftWindow = function() { scrollBy(0, -60) };
         window.addEventListener("hashchange", shiftWindow);
         function load() { if (window.location.hash) shiftWindow(); }
     </script>
-{% endblock %}
+
+    <!-- Google Analytics: change UA-XXXXX-X to be your site's ID. -->
+    <!-- <script>
+        (function(b,o,i,l,e,r){b.GoogleAnalyticsObject=l;b[l]||(b[l]=
+        function(){(b[l].q=b[l].q||[]).push(arguments)});b[l].l=+new Date;
+        e=o.createElement(i);r=o.getElementsByTagName(i)[0];
+        e.src='//www.google-analytics.com/analytics.js';
+        r.parentNode.insertBefore(e,r)}(window,document,'script','ga'));
+        ga('create','UA-XXXXX-X','auto');ga('send','pageview');
+    </script> -->
+
+</body>
+</html>
