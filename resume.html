@@ -205,50 +205,55 @@
         </div>
         <div>
             <h2 id="leadership" class="sub-header">Leadership</h2>
-            {% for leadership in leadership_list %}
-                <p><strong>{{ leadership.name }}</strong> | {{ leadership.location }}
-                <span style="float:right">{{ leadership.start_month|date:"M, Y" }} -
-                {% if leadership.end_month == leadership.start_month %}
-                    Present
-                {% else %}
-                    {{ leadership.end_month|date:"M, Y"  }}
-                {% endif %}</span><br>
-                {{ leadership.position }}<br>
+                <p><strong>Johns Hopkins University Recruitment</strong> | Accenture
+                <span style="float:right">Sep 2013 - Jan 2015</span><br>
+                Center for Leadership Education Recruitment Lead<br>
                 <ul>
-                {% for leadership_desc in leadership.leadershipdesc_set.all %}
-                    <li>{{ leadership_desc.description }}</li>
-                {% endfor %}
+                    <li>Directed Accenture recruitment efforts at the JHU Center for Leadership Education</li>
+					<li>Led Accenture informational presentations on campus</li>
                 </ul>
-            {% endfor %}
+				<p><strong>DC Analyst Action Team</strong> | Accenture
+                <span style="float:right">Sep 2013 - Jan 2015</span><br>
+                Community Service Co-Lead<br>
+                <ul>
+                    <li>Led a team of ten analysts in planning and executing monthly volunteer events</li>
+					<li>Organized mock interview and job transfer assistance workshops for DC homeless</li>
+                </ul>
+				<p><strong>Hopkins Biotech Network</strong> | Johns Hopkins University
+                <span style="float:right">Nov 2012 - May 2013</span><br>
+                Director of Events and Marketing<br>
+                <ul>
+                    <li>Coordinated monthly informational, networking, & etiquette events for JHU students</li>
+                </ul>
         </div>
-        {% if activity_list %}
         <div>
             <h2 id="activities" class="sub-header">Activities</h2>
-            {% for activity in activity_list %}
-                <p><strong>{{ activity.name }}</strong>{% if activity.location %} | {{ activity.location }}{% endif %}
-                <span style="float:right">{{ activity.start_month|date:"M, Y" }} -
-                {% if activity.end_month == activity.start_month %}
-                    Present
-                {% else %}
-                    {{ activity.end_month|date:"M, Y"  }}
-                {% endif %}</span><br>
-                &emsp;&emsp;&emsp;{{ activity.description }}<br>
-            {% endfor %}
+                <p><strong>Ronald Reagan Medical Center Volunteer</strong> | UCLA
+                <span style="float:right">Sep 2011 - Jun 2012</span><br>
+                &emsp;&emsp;&emsp;Patient escort volunteer: 100+ hours transporting patients and observing procedures<br>
+				<p><strong>New Salvation Ministries Volunteer</strong> | Skid Row, Los Angeles, CA
+                <span style="float:right">Sep 2010 - Jun 2012</span><br>
+                &emsp;&emsp;&emsp;Organized and distributed food monthly to homeless at the Union Rescue Mission<br>
+				<p><strong>Campus Crusade for Christ</strong> | UCLA
+                <span style="float:right">Sep 2010 - Jun 2012</span><br>
+                &emsp;&emsp;&emsp;Participated weekly in Real Life Meetings, Bible study, and helped lead Safe Rides<br>
+				<p><strong>Biomedical Engineering Society</strong> | UCLA
+                <span style="float:right">Sep 2008 - Jun 2012</span><br>
+                &emsp;&emsp;&emsp;Participated in networking, informational, and social events<br>
+				<p><strong>Sigma Chi Fraternity, Delta Eta Chapter</strong> | UCLA
+                <span style="float:right">Sep 2008 - Jun 2012</span><br>
+                &emsp;&emsp;&emsp;Participated in brotherhood events, including philanthropic and recruitment events<br>
+				<p><strong>Eagle Scout</strong> | Troop 543, Orange, CA
+                <span style="float:right">Aug 2003 - Jun 2008</span><br>
+                &emsp;&emsp;&emsp;Project: Refurbished a section of Santiago Oaks Regional Park that burned in a wildfire<br>
         </div>
-    {% endif %}
-        {% if award_list %}
         <div>
             <h2 id="awards-distinctions" class="sub-header">Awards & Distinctions</h2>
-            {% for award in award_list %}
-                <p><strong>{{ award.name }}</strong>{% if award.location %} | {{ award.location }}{% endif %}
-                <span style="float:right">
-                {% if award.date %}
-                    {{ award.date|date:"M, Y" }}
-                {% endif %}</span><br>
-                &emsp;&emsp;&emsp;{{ award.description }}<br>
-            {% endfor %}
+                <p><strong>W.S.E. Deans Tuition Fellowship</strong> | Johns Hopkins University<br>
+                &emsp;&emsp;&emsp;$25,000 given to applicants demonstrating a strong penchant for engineering<br>
+				<p><strong>Undergraduate Research Fellows Program</strong> | University of California, Los Angeles<br>
+                &emsp;&emsp;&emsp;$2,000 given to support students excelling in undergraduate research<br>
         </div>
-    {% endif %}
     </div>
     </div>
 
