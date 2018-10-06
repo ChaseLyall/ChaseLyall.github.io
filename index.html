@@ -3,53 +3,46 @@
 
 <head>
     <meta charset="utf-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta http-equiv="x-ua-compatible" content="ie=edge">
     <title>Chase Lyall</title>
     <meta name="description" content="ChaseLyall.Me">
-    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
 
-    <link rel="apple-touch-icon" href="img/apple-touch-icon.png">
+    <link rel="manifest" href="site.webmanifest">
+    <link rel="apple-touch-icon" href="icon.png">
+    <!-- Place favicon.ico in the root directory -->
 
-    <link rel="stylesheet" type="text/css" href="https://cdnjs.cloudflare.com/ajax/libs/normalize/5.0.0/normalize.min.css"/>
-    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
-    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap-theme.min.css" integrity="sha384-rHyoN1iRsVXV4nD0JutlnGaslCJuC7uwjduW9SVrLvRYooPp2bWYgmgJQIXwl/Sp" crossorigin="anonymous">
+    <link rel="stylesheet" type="text/css" href="https://cdnjs.cloudflare.com/ajax/libs/normalize/8.0.0/normalize.min.css"/>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css" integrity="sha384-MCw98/SFnGE8fJT3GXwEOngsV7Zt27NXFoaoApmYm81iuXoPkFOJwJ8ERdknLPMO" crossorigin="anonymous">
     <link rel="stylesheet" type="text/css" href="css/main.css"/>
-    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.6.3/css/font-awesome.min.css">
-    <script src="js/modernizr-2.8.3.min.js"></script>
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.3.1/css/all.css" integrity="sha384-mzrmE5qonljUremFsqc01SB46JvROS7bZs3IO2EmfFsd15uHvIt+Y8vEf7N7fWAU" crossorigin="anonymous">
 </head>
 
 <body>
-    <!--[if lt IE 8]>
-        <p class="browserupgrade">You are using an <strong>outdated</strong> browser. Please <a href="http://browsehappy.com/">upgrade your browser</a> to improve your experience.</p>
+    <!--[if lte IE 9]>
+        <p class="browserupgrade">You are using an <strong>outdated</strong> browser. Please <a href="https://browsehappy.com/">upgrade your browser</a> to improve your experience and security.</p>
     <![endif]-->
 
-<!-- Add your site or application content here -->
-<a class="sr-only sr-only-focusable" href="#content">Skip to main content</a>
+    <a class="sr-only sr-only-focusable" href="#content">Skip to main content</a>
 
-<!-- Navbar -->
-<nav class="navbar navbar-default navbar-static-top" id="top" role="banner" style="margin-bottom: 0px">
-    <div class="container-fluid">
-        <!-- Brand and toggle get grouped for better mobile display -->
-        <div class="navbar-header">
-            <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1">
-                <span class="sr-only">Toggle navigation</span>
-                <span class="icon-bar"></span>
-                <span class="icon-bar"></span>
-                <span class="icon-bar"></span>
-            </button>
-            <a class="navbar-brand" href="index.html">Chase Lyall</a>
-        </div>
-        <!-- Collect the nav links, forms, and other content for toggling -->
-        <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
-            <ul class="nav navbar-nav">
-                <li><a href="resume.html">About</a></li>
-				<li><a href="https://chaselyall.wordpress.com/">Blog</a></li>
-            </ul>
-        </div>
-        <!-- /.navbar-collapse -->
-    </div>
-    <!-- /.container-fluid -->
-</nav>
+    <!-- Navbar -->
+    <nav class="navbar navbar-expand-md navbar-light bg-light">
+        <a class="navbar-brand" href="#">Chase Lyall</a>
+        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarTogglerDemo02" aria-controls="navbarTogglerDemo02" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+        </button>
+
+      <div class="collapse navbar-collapse" id="navbarTogglerDemo02">
+        <ul class="navbar-nav mr-auto mt-2 mt-lg-0">
+          <li class="nav-item active">
+            <a class="nav-link" href="#">Home <span class="sr-only">(current)</span></a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="resume.html">About</a>
+          </li>
+        </ul>
+      </div>
+    </nav>
 
 <!-- Main -->
     <header class="home-header">
@@ -62,64 +55,65 @@
     <!--<img class="img-responsive center-block" align="middle" src="img/Godafoss.png" alt="Godafoss, Iceland">-->
     </header>
     <div class="container" style="margin-top: 40px">
-    <div class="col-md-4">
-        <h2 class="sub-header">Objective</h2>
-        <p>Hello, my name is Chase Lyall, and I am a business and technology consultant for Accenture Federal Services.
-        I am especially interested in how large datasets can improve politics and am therefore working to better understand
-        big data analysis and large-scale web apps and the technologies behind them (Linux, Kubernetes and Docker, Nginx, etc.), cloud computing (Google Cloud, AWS, Azure),
-        databases (Oracle 12c, NoSQL), data analysis (Matplotlib, Pandas, R), data visualization (D3.js, Google Charts,  Tableau), web scraping (Selenium), and more.<p>
-    </div>
-    <div class="col-md-4">
-        <h2 class="sub-header">Interests</h2>
-        <p>Outside of work I enjoy catching up on the news via NPR One (I highly suggest it and so does NPR, they will not stop suggesting it), BBC, Google News, and Reddit.
-		I also enjoy exercising, which is currently mostly comprised of rock climbing, weight lifting, running, and biking. And on rare occations I especially enjoy travelling so that I can learn about
-		other cultures and food, and because it is hard to hate up close. My other interests include skiing or snowboarding, hiking and camping, and volunteering for the homeless.
-		Besides NPR One I highly suggest HBO's Last Week Tonight with John Oliver, NPR's This American Life, NPR's Wait Wait Don't Tell Me, CBS's 60 Minutes, and Google Photos.</p>
-    </div>
-    <div class="col-md-4">
-        <h2 class="sub-header">Current Issues</h2>
-        <p>Here are some current issues that interst me: I would like to work to eliminate gerrymandering, repeal Citizens United and outlaw SuperPACs, switch from 
-		"first past the post" voting to a "single transferrable vote" voting method, fight climate change by utilizing clean energy, increasing recycling, and reducing over-consumption and overpopulation,
-      expand education and reduce tuition expenses, reduce the national defecit, expand the Earned Income Tax Credit, 
-		reduce healthcare expenditures by increasing transparency and efficiency, promote family planning and contraception globally, reduce homelessness and poverty, increase the Social Security tax limit, 
-		reduce straw man purchases of firearms, utilize background checks for every firearm sale, outlaw the death penalty,
-      <s><a href="http://www.npr.org/sections/thetwo-way/2016/08/18/490498158/justice-department-will-phase-out-its-use-of-private-prisons">outlaw for-profit prisons</a></s>, 
-		and switch from race-associated polling methods to income and location based research metrics.<p>
-    </div>
-    </div>
-
-<footer role="contentinfo" class="home-footer">
-    <div class="container">
-        <div class="col-md-12">
-        <hr>
-        <p>
-            <a href="https://www.facebook.com/chase.lyall"><i class="fa fa-facebook"></i></a> &sdot;
-            <a href="https://twitter.com/ChaseLyall"><i class="fa fa-twitter"></i></a> &sdot;
-            <a href="http://www.linkedin.com/in/chaselyall/en"><i class="fa fa-linkedin"></i></a> &sdot;
-            <a href="http://google.com/+ChaseLyall"><i class="fa fa-google-plus"></i></a> &sdot;
-            <a href="https://github.com/ChaseLyall"><i class="fa fa-github"></i></a>
-        </p>
-		<p>© Chase Lyall, 2016</p>
+        <div class="row">
+            <div class="col-md-4">
+                <h2 class="sub-header">Objective</h2>
+                <p>Hello, my name is Chase Lyall, and I am a business and technology consultant for Accenture Federal Services.
+                I am especially interested in how large datasets can improve politics and am therefore working to better understand
+                big data analysis and large-scale web apps and the technologies behind them (Linux, Kubernetes and Docker, Nginx, etc.), cloud computing (Google Cloud, AWS, Azure),
+                databases (Oracle 12c, NoSQL), data analysis (Matplotlib, Pandas, R), data visualization (D3.js, Google Charts,  Tableau), web scraping (Selenium), and more.</p>
+            </div>
+            <div class="col-md-4">
+                <h2 class="sub-header">Interests</h2>
+                <p>Outside of work I enjoy catching up on the news via NPR One (I highly suggest it and so does NPR, they will not stop suggesting it), BBC, Google News, and Reddit.
+        		I also enjoy exercising, which is currently mostly comprised of rock climbing, weight lifting, running, and biking. And on rare occations I especially enjoy travelling so that I can learn about
+        		other cultures and food, and because it is hard to hate up close. My other interests include skiing or snowboarding, hiking and camping, and volunteering for the homeless.
+        		Besides NPR One I highly suggest HBO's Last Week Tonight with John Oliver, NPR's This American Life, NPR's Wait Wait Don't Tell Me, CBS's 60 Minutes, and Google Photos.</p>
+            </div>
+            <div class="col-md-4">
+                <h2 class="sub-header">Current Issues</h2>
+                <p>Here are some current issues that interst me: I would like to work to eliminate gerrymandering, repeal Citizens United and outlaw SuperPACs, switch from
+        		"first past the post" voting to a "single transferrable vote" voting method, fight climate change by utilizing clean energy, increasing recycling, and reducing over-consumption and overpopulation,
+              expand education and reduce tuition expenses, reduce the national defecit, expand the Earned Income Tax Credit,
+        		reduce healthcare expenditures by increasing transparency and efficiency, promote family planning and contraception globally, reduce homelessness and poverty, increase the Social Security tax limit,
+        		reduce straw man purchases of firearms, utilize background checks for every firearm sale, outlaw the death penalty,
+              <s><a href="http://www.npr.org/sections/thetwo-way/2016/08/18/490498158/justice-department-will-phase-out-its-use-of-private-prisons">outlaw for-profit prisons</a></s>,
+        		and switch from race-associated polling methods to income and location based research metrics.</p>
+            </div>
         </div>
     </div>
-</footer>
 
-    <script src="http://code.jquery.com/jquery-3.1.1.slim.min.js" integrity="sha256-/SIrNqv8h6QGKDuNoLGA4iret+kyesCkHGzVUUV0shc=" crossorigin="anonymous"></script>
-    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js" integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa" crossorigin="anonymous"></script>
-    <script src="js/plugins.js'"></script>
-    <script src="js/main.js'"></script>
+    <footer role="contentinfo" class="home-footer">
+        <div class="container">
+            <div class="col-md-12">
+            <hr>
+            <p>
+                <a href="https://www.facebook.com/chase.lyall"><i class="fab fa-facebook"></i></a> &sdot;
+                <a href="https://twitter.com/ChaseLyall"><i class="fab fa-twitter"></i></a> &sdot;
+                <a href="http://www.linkedin.com/in/chaselyall/en"><i class="fab fa-linkedin"></i></a> &sdot;
+                <a href="http://google.com/+ChaseLyall"><i class="fab fa-google-plus"></i></a> &sdot;
+                <a href="https://github.com/ChaseLyall"><i class="fab fa-github"></i></a>
+            </p>
+    		<p>© Chase Lyall, 2016</p>
+            </div>
+        </div>
+    </footer>
 
-    <!-- Google Analytics: change UA-XXXXX-X to be your site's ID. -->
+    <script src="js/vendor/modernizr-3.6.0.min.js"></script>
+    <script src="https://code.jquery.com/jquery-3.3.1.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
+    <script>window.jQuery || document.write('<script src="js/vendor/jquery-3.3.1.min.js"><\/script>')</script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.3/umd/popper.min.js" integrity="sha384-ZMP7rVo3mIykV+2+9J3UJ46jBk0WLaUAdn689aCwoqbBJiSnjAK/l8WvCWPIPm49" crossorigin="anonymous"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/js/bootstrap.min.js" integrity="sha384-ChfqqxuZUCnJSK3+MXmPNIyE6ZbWh2IMqE241rYiqJxyMiZ6OW/JmZQ5stwEULTy" crossorigin="anonymous"></script>
+    <script src="js/plugins.js"></script>
+    <script src="js/main.js"></script>
+
+    <!-- Google Analytics: change UA-XXXXX-Y to be your site's ID. -->
     <script>
-	  (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
-	  (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
-	  m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
-	  })(window,document,'script','https://www.google-analytics.com/analytics.js','ga');
-
-	  ga('create', 'UA-76254850-1', 'auto');
-	  ga('send', 'pageview');
-
-	</script>
+    window.ga = function () { ga.q.push(arguments) }; ga.q = []; ga.l = +new Date;
+    ga('create', 'UA-76254850-1', 'auto'); ga('send', 'pageview')
+    </script>
+    <script src="https://www.google-analytics.com/analytics.js" async defer></script>
 
 </body>
+
 </html>
